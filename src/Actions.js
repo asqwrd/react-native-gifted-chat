@@ -6,6 +6,9 @@ import {
   View,
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+
 export default class Actions extends React.Component {
   constructor(props) {
     super(props);
@@ -41,11 +44,7 @@ export default class Actions extends React.Component {
       <View
         style={[styles.wrapper, this.props.wrapperStyle]}
       >
-        <Text
-          style={[styles.iconText, this.props.iconTextStyle]}
-        >
-          +
-        </Text>
+        <Icon size={34} iconStyle={styles.iconText} name="attachment" color="#b2b2b2" />
       </View>
     );
   }
@@ -64,21 +63,22 @@ export default class Actions extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: 26,
-    height: 26,
-    marginLeft: 10,
-    marginBottom: 10,
+    width: 34,
+    height: 34,
+    marginLeft: 5,
+    marginBottom: 5,
+    marginTop:5
   },
   wrapper: {
     borderRadius: 13,
-    borderColor: '#b2b2b2',
+    borderColor: 'transparent',
     borderWidth: 2,
     flex: 1,
   },
   iconText: {
     color: '#b2b2b2',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 34,
     backgroundColor: 'transparent',
     textAlign: 'center',
   },
